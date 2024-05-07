@@ -6,7 +6,7 @@ public class Example {
         Either<User, String> result = userService.getPerson(1);
 
         result.fold(
-                user -> System.out.println("User: " + user),
+                user -> System.out.println("User: " + user.getName()),
                 error -> System.out.println("Error: " + error)
         );
     }
